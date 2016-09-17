@@ -7,7 +7,7 @@
 // @include      	http*
 // @include      	https*
 // @require      	https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js
-// @resource    	customCSS http://localhost/PlayIt_Tampermonkey/playit.css
+// @resource    	customCSS https://raw.githubusercontent.com/rkaradas/PlayIt-Monkey-Script/master/playit.css
 // @grant       	GM_addStyle
 // @grant       	GM_getResourceText
 // @grant           GM_xmlhttpRequest
