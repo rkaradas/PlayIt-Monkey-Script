@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         	PlayIt-Monkey-Script
 // @namespace    	https://github.com/rkaradas
-// @version      	0.2
+// @version      	0.3
 // @description  	Configurable frontend for PlayIt Service 
 // @author       	Recep Karadas
 // @include      	http*
 // @include      	https*
+// @connect 		*
 // @require      	https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js
 // @resource    	customCSS https://raw.githubusercontent.com/rkaradas/PlayIt-Monkey-Script/master/playit.css
 // @grant       	GM_addStyle
