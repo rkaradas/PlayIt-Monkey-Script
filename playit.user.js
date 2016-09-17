@@ -226,10 +226,7 @@ GM_addStyle (newCSS);
         
         if(isSelected)
         {
-            selectedConnectionIdx = connections.length-1;
             setSelectedConnection();
-            selectedElement = connections[selectedConnectionIdx];
-            saveSettings();
         }
         let connectionContainer = $(`
             <div class='play-it-settings-connection' >
@@ -260,6 +257,11 @@ GM_addStyle (newCSS);
         connectionContainer.find(".play-it-settings-connection-select").click(function(){
             connectionSelectClick($(this));
         });
+        if(isSelected)
+        {
+            selectedElement = connections[selectedConnectionIdx];
+            saveSettings();
+        }
     }
     function clearSelectedConnection()
     {

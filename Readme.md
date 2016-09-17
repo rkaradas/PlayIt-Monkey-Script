@@ -23,6 +23,6 @@ You can add as many entries as you want, update and delete them.
 
 ## Known problems
 It is possible that you won't see the icons on some websites, because other elements are laying over the icons. Let me know, if you find a page where this happens.
-So that was it...  My night project, so there might be some bugs. You can keep them or share them with me :smiley: 
+So that was it...  My night project, so there might be some bugs. You can keep them or share them with me :smiley:
 
 Thanks and have fun :wink:
