@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         	PlayIt-Monkey-Script
 // @namespace    	https://github.com/rkaradas
-// @version      	0.3
+// @version      	0.4
 // @description  	Configurable frontend for PlayIt Service 
 // @author       	Recep Karadas
 // @include      	http*
