@@ -30,7 +30,7 @@
 {
 	position: fixed;
 	top: 50%;
-	left: 20px;
+	left: 0;
 	z-index: 999999999;
 }
 .play-it-container div
@@ -44,6 +44,11 @@
     padding: 10px;
     text-align: center;
     cursor: pointer;
+	background: rgba(100,100,100,0.4);
+    margin: 5px;
+}
+.play-it-play-btn:hover, .play-it-settings-btn:hover {
+    color: white;
 }
 .play-it-settings
 {
