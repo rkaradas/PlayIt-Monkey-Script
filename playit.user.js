@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         	Kodi PlayIt Service Script ES5
+// @name         	PlayIt-Monkey-Script
 // @namespace    	https://github.com/rkaradas
 // @version      	0.1
 // @description  	Configurable frontend for PlayIt Service 
