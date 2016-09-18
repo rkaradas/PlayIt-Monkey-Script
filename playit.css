@@ -29,16 +29,42 @@
 .play-it-container
 {
 	position: fixed;
-	top: 50%;
-	left: 0;
-	z-index: 999999999;
+	top: 0;
+	left: -70px;
+	width:70px;
+	z-index: 999999999999999999;
+	height: 100%;
+    padding-right: 20px;
 }
-.play-it-container div
+.play-it-container-inner
 {
-	font-size: 20px;
+	background: #eee;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #ccc;
 }
-.play-it-play-btn,
-.play-it-settings-btn
+
+.play-it-sidebar
+{
+	position: relative;
+	top: 20%;
+}
+.play-it-footer
+{
+    width: 100%;
+	position:absolute;
+	bottom:0;
+}
+.play-it-footer div
+{
+	font-size: 9px !important;
+	text-align: center;
+}
+
+.play-it-sidebar > div:not([class='play-it-settings']), 
+.play-it-sidebar > a div
 {
     display: block !important;
     padding: 10px;
@@ -47,7 +73,14 @@
 	background: rgba(100,100,100,0.4);
     margin: 5px;
 }
-.play-it-play-btn:hover, .play-it-settings-btn:hover {
+
+.play-it-container div
+{
+	font-size: 20px;
+}
+.play-it-sidebar > div:not([class='play-it-settings']):hover, 
+.play-it-sidebar > a div:hover
+{
     color: white;
 }
 .play-it-settings
@@ -143,3 +176,4 @@
 .play-it-settings-connection-select:disabled {
     background: limegreen;
     color: black;
+}

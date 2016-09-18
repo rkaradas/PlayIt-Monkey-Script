@@ -15,9 +15,9 @@ I tested it with Tampermonkey on Chrome and Firefox and also with Greasemonkey o
 4. Confirm the following messages to finish the installation.
 
 ## Overview
-Now you should see two icons on the left side of all pages (see picture below, marked with a red border). A play button to send the current url to the PlayIt Service and a settings button, to configure the kodi connection information (at least the ip-address).
+Now you should see nothing :smiley:, but if you point to the left edge of a website in your browser, you should see the navigation bar (see the gif below). Click the play button to send the current url to the PlayIt Service and the settings button, to configure the kodi connection information (at least the ip-address).
 You can add as many entries as you want, update and delete them.  
- ![Main icons](https://raw.githubusercontent.com/rkaradas/PlayIt-Monkey-Script/master/screenshots/play_settings_fixed.png "Main icons")
+ ![Main icons](https://raw.githubusercontent.com/rkaradas/PlayIt-Monkey-Script/master/screenshots/menu.gif "Main icons")
 
  ![Settings overlay](https://raw.githubusercontent.com/rkaradas/PlayIt-Monkey-Script/master/screenshots/settings_overlay.png "Settings overlay")
 

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         	PlayIt-Monkey-Script
 // @namespace    	https://github.com/rkaradas
-// @version      	0.4
+// @version      	0.5
 // @description  	Configurable frontend for PlayIt Service 
 // @author       	Recep Karadas
 // @include      	http*
@@ -16,6 +16,7 @@
 // @grant           GM_setValue
 // @grant           GM_deleteValue
 // ==/UserScript==
+
 
 
 /**/
@@ -36,9 +37,13 @@ GM_addStyle (newCSS);
     /*$("head").append (`<link href="//localhost/PlayIt_Tampermonkey/playit.css" rel="stylesheet" type="text/css">`);*/
     
     var container = `
-<div class='play-it-container'>
-  <div class='octicon octicon-triangle-right play-it-play-btn'> </div>
-  <div class='octicon octicon-settings play-it-settings-btn'> </div>
+<div class='play-it-container' >
+<div class='play-it-container-inner' >
+<div class='play-it-sidebar' >
+  <div class='octicon octicon-triangle-right play-it-play-btn' title='Send to PlayIt'> </div>
+  <div class='octicon octicon-settings play-it-settings-btn' title='Settings'> </div>
+  <div class='octicon octicon-settings play-it-test-btn' style='display:none !important;' > </div>
+  <a href='https://github.com/rkaradas/PlayIt-Monkey-Script' title='Show on GitHub' target='_blank'><div class='octicon octicon-mark-github'> </div></a>
   <div class='play-it-settings' >
     <div class='play-it-settings-wrapper'>
       <div class='play-it-settings-header'>SETTINGS</div>
@@ -64,6 +69,15 @@ GM_addStyle (newCSS);
       </div>
     </div>
   </div>
+
+</div>
+
+  <div class="play-it-footer">
+    <div>&lt;&gt;</div>
+    <div>with ❤️ by </div>
+    <div>R.Karadas</div>
+  </div>
+</div>
 </div>
 `;  
     
@@ -73,11 +87,29 @@ GM_addStyle (newCSS);
     {
         editingObject = null;
         let containerEl = $(container);//.addClass("play-it-play-btn");
+        
+        containerEl.mouseenter(function(){
+            $(this).animate({left: 0});
+        });
+        containerEl.mouseleave(function(){
+            $(this).animate({left: "-" + $(this).css("width")});
+        });
+        
         containerEl.find(".play-it-settings-btn").click(function(){
             toggleSettings();
         });
         containerEl.find(".play-it-play-btn").click(function(){
             sendToKodi(location.href);
+        });
+        containerEl.find(".play-it-test-btn").click(function(){
+            let source = document.getElementsByTagName('html')[0].innerHTML;
+            let mp4Links = source.match(/(https?:\/\/.*\.mp4)/gm);
+            mp4Links.forEach((itm)=>
+            {
+                console.log(itm);
+            });
+            
+            //sendToKodi(location.href);
         });
         containerEl.find(".play-it-settings-close").click(function(){
             toggleSettings();
@@ -91,7 +123,10 @@ GM_addStyle (newCSS);
         containerEl.find(".play-it-settings-clear").click(function(){
             clearSettings();
         });
-        $("body").prepend(containerEl);
+        
+        $("body").filter(function() {
+            return (self==top);
+        }).prepend(containerEl);
     }
     
     // Functions
@@ -414,6 +449,9 @@ GM_addStyle (newCSS);
     }   
 })();
 
+   
+    
+    
    
     
     
